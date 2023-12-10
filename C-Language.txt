@@ -1,0 +1,1604 @@
+
+
+                ####**** C Language ****####
+
+
+####**** C Language : 
+
+C is a general purpose programming language that was 
+created in the early 1970s by "Dennis Ritchie" at "Bell 
+Labs", which is now a part of "Nokia" , C language was 
+developed as an evolution of the B programming language, 
+with a primary goal of providing a system programming 
+language for the "UNIX" operating system .
+
+general purpose : C is a versatile language that is not 
+limited to any specific application domain , it can be 
+used for wide range of programming tasks , includeing 
+system programming , application developement , game ,
+embedded systems , and more ... .
+
+procedural language : C is a procedural language which 
+means that it follows a procedural paradigm where a
+program is divided into functions or procedures , each 
+function contains a series of statements that are 
+executed sequentially .
+
+Low Level : C provides low-level programming features 
+that allow direct manipulation of memory and hardware, 
+making it well-suited for system-level programming , 
+this level of control is beneficial when device drivers, 
+and other performance critical applications .
+
+Portability : C is know for its portability , meaning that
+programs written in C can be easily adapted to run on 
+different platforms with minimal changes , this is due ,
+in part , to its close relationship with the "unix 
+oprerating system" , which was designed to be highly 
+portable .
+ 
+Efficiency : C is a compiled language, which means that 
+programs written in C are translated into machine code
+before execution , this compilation process often results
+in highly efficient and fast running programs .
+
+Influence on Other Languages: C has had a significant 
+impact on the development of other programming languages. 
+Many modern languages, such as C++, C#, and Objective-C, 
+have borrowed syntax and concepts from C .
+
+What You Can Do with C: With C, you can develop a wide 
+variety of software, including operating systems, device 
+drivers, embedded systems, game engines, databases, and 
+more. Its efficiency and control over hardware make it a 
+popular choice for building performance-critical 
+applications .
+
+
+####**** Hello World : 
+
+#include <stdio.h>
+
+int main(void)
+{
+  printf("Hello, World!");
+  return (0);
+}
+
+<stdio.h> is a header file in the C Standard Library that 
+stands for "standard input-output." It provides functions 
+for input and output operations, such as reading from the 
+keyboard, writing to the screen, and working with files. 
+The name "stdio" comes from the fact that it deals with 
+standard input and output streams .
+
+In C, the main function is the entry point of a C program
+When a C program is executed, the operating system starts 
+running the program from the main function The main 
+function is mandatory, and it has a specific signature .
+
+printf is functions that responsible about the output .
+
+return 0 used to indicate successful execution, while a 
+non-zero value indicates an error .
+
+
+####**** Escapeing Sequences : 
+
+in C language escape sequences are special sequences of 
+characters that represent non-printable or special 
+characters , escape sequences begin with a backslash \ 
+followed by a character or a combination of characters .
+
+\n : new line .
+\t : tab character .
+\r : carriage return , move cursor to current line .
+\b : back spcae .
+\f : from feed , moves the cursor to next page .
+\a : alert .
+\v : vertical tab .
+\0 : null character .
+\  : back slash .
+\? : question mark .
+\" : double quote .
+\' : single quote .
+\xhh : Hexadecimal .
+\ooo : Octal .
+
+printf("hello world\n");
+printf("\'hello\', \'world\'");
+printf("hello world\t");
+printf("\"hello\", \"world\"");
+
+####**** Comments : 
+
+// comment .
+
+/* comment */
+
+####**** Variables : 
+
+Variable is a named storage location that holds a value 
+with a specific data type , variables are fundamental to 
+programming because they allow you to store and 
+manipulate data in programs .
+
+Variable Names Ruls : 
+- Must begin with a letter (uppercase or lowercase) 
+or an underscore (_) .
+- Can be followed by letters, digits, or underscores .
+- Must not be a C keyword .
+
+Variable Declaration : data_type variable_name;
+Variable Initialization : variable_name = initial_value;
+
+Varibales Scope : 
+
+The scope of a variable defines where it can be accessed 
+In C, variables can have local or global scope .
+
+Local Variables: Declared within a block (inside 
+a function). Accessible only within that block .
+
+Global Variables: Declared outside of any function, 
+Accessible throughout the entire program .
+
+int main()
+{
+int i; // declaration .
+i = 1; // initialization .
+printf("%d \n", i);
+return 0;
+}
+
+Constants : 
+
+Constants are similar to variables, but their values 
+cannot be changed during program execution. Constants 
+are declared using the const keyword .
+
+const int MAX_VALUE = 100;
+
+
+####**** Data Type :
+
+int : 4 bytes(32 bits) : -2,147,483,648 to 2,147,483,647 .
+unsigned int : 4 bytes(32 bits) : 0 to 4,294,967,295 .
+
+short : 2 bytes(16 bits) : -32,768 to 32,767 .
+
+unsigned short : 2 bytes(16 bits) : 0 to 65,535 .
+
+float : 4 bytes(32 bits) : Typically 6 decimal places .
+
+long : 4 bytes(32 bits) or 8 bytes(64 bits) 
+(depends on the system) .
+-2,147,483,648 to 2,147,483,647 
+(32-bit system) .
+or 
+-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 
+(64-bit system) .
+
+unsigned long : 4 bytes(32 bits) or 8 bytes(64 bits) 
+(depends on the system) .
+0 to 4,294,967,295 
+(32-bit system)
+or 
+0 to 18,446,744,073,709,551,615 
+(64-bit system) .
+
+long long : 8 bytes(64 bits) : 
+-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 .
+
+unsigned long long : 8 bytes(64 bits) :
+0 to 18,446,744,073,709,551,615 .
+
+double : 8 bytes(64 bits) : Typically 15 decimal places . 
+
+char : 1 byte(8 bits) : -128 to 127 .
+
+unsigned char : 1 byte(8 bits) : 0 to 255 .
+
+float _Complex : 8 bytes(64 bits) .
+Real and imaginary parts each with 6 decimal places .
+
+double _Complex : 16 bytes(128 bits) .
+Real and imaginary parts each with 15 decimal places .
+
+long double : 16 bytes(128 bits) .
+Typically 15 decimal places .
+
+long double _Complex : 32 bytes(256 bits) .
+Real and imaginary parts each with 15 decimal places .
+
+bool : The bool data type represents boolean values, 
+typically true or false. In C99 and later versions, a 
+standardized boolean type _Bool was introduced, and the 
+stdbool.h header provides the bool type as a macro for 
+_Bool .
+
+#include <stdbool.h>
+bool isTrue = true;
+bool isFalse = false;
+
+byte : The byte data type is not a standard data type 
+in C. However, it is commonly used in certain contexts, 
+especially in embedded systems and low-level programming. 
+In many cases, byte is used as an alias for an 8-bit 
+unsigned integer .
+
+typedef unsigned char byte;
+byte myByte = 0xAB;  
+
+array[] : An array is a collection of elements of the 
+same data type, stored in contiguous memory locations, 
+Elements are accessed using an index starting from 0 .
+
+struct {} : A structure is a user-defined data type that 
+allows you to group variables of different data types 
+under a single name. Each variable within the structure 
+is called a member .
+
+union {} : A union is similar to a struct, but all its 
+members share the same memory location. Only one member 
+can hold a value at a time. Unions are useful when you 
+want to represent different types using the same memory 
+space .
+
+enum {} : An enumeration is a user-defined data type 
+that consists of named integer constants. It allows 
+you to create symbolic names for values to improve 
+code readability .
+
+
+####**** Format Specify : 
+
+Integer Specifiers :
+
+%d  : Signed decimal integer
+%u  : Unsigned decimal integer
+%ld : Signed long decimal integer
+%lu : Unsigned long decimal integer
+%hd : Signed short decimal integer
+%hu : Unsigned short decimal integer
+%o  : Unsigned octal
+%x or %X : Unsigned hexadecimal (lowercase or uppercase)
+
+Floating-Point Specifiers :
+
+%f : Decimal floating point
+%lf: Double-precision floating point
+%e or %E : Scientific notation (lowercase or uppercase)
+%g or %G : Compact notation 
+(f or e format, lowercase or uppercase)
+
+Character Specifiers :
+
+%c : Character
+%s : String
+
+Pointer Specifiers :
+
+%p : Pointer
+
+Width and Precision Specifiers :
+
+%*d  : Specifies the width for an integer
+%.*f : Specifies the precision for a floating-point number
+
+Size Specifiers :
+
+%h : Short (modifier for integer types)
+%l : Long (modifier for integer types and floating-point)
+%ll: Long long (modifier for integer types)
+
+%.1 : decimal precision . 
+%1  : minmum field width .
+%-  : left align .
+
+
+####**** C Language Operators : 
+
++ : Addition .
+- : Subtraction .
+* : Multiplication .
+/ : Division .
+% : Modulus .
+++ : Increment .
+-- : Decrement .
+
+&& , || , ! , = , == , ^ , > , < ,  
+!= , >= , <= , += , -= , *= , /= , %= .
+
+&& : and , for check two conditions if true .
+|| : or , for check one condition if true .
+!  : not , if true return false if false return true .
+
+####**** I/O : 
+
+printf(""); // output .
+scanf(""); // input .
+
+int main()
+{
+int age;
+printf("How old are you? ");
+scanf("%d", &age);
+printf("you are %d years old\n", age);
+return 0;
+}
+
+In C language we can use printf and scanf for output and 
+input to print and enter data .
+
+
+####**** IF Statement : 
+
+int i = 1;
+if (i == 1)
+{
+  printf("i == 1");
+}
+
+int i = 1;
+if (i == 1)
+{
+  printf("i == 1");
+}else
+{
+  printf("i != 1");
+}
+
+int i = 1;
+if (i == 1)
+{
+  printf("i == 1");
+}else if(i == 2)
+{
+  printf("i = 2");
+}else
+{
+  printf("i != 1 and 2");
+}
+
+
+####**** Switch : 
+
+int variable = value;
+switch (variable)
+{
+case value1: 
+  code;
+  break;
+case value2:
+  code;
+  break;
+default: 
+  code;
+}
+
+int i = 1;
+switch(i)
+{
+case 1:
+  printf("i = 1");
+  break;
+case 2:
+  printf("i = 2");
+  break;
+default:
+  printf("i != 1 and 2");
+}
+
+
+####**** Functions : 
+
+Functions Types : 
+1 : Function without return and arguments .
+2 : Function with return and arguments .
+3 : Functions with return and without arguments .
+4 : Functions without return and with arguments .
+
+1 : 
+void function_name()
+{
+printf("hello abid");
+}
+
+int main()
+{
+function_name();;
+return 0;
+}
+
+2 : 
+int function_name(int i, int j)
+{
+return i + j;
+}
+
+int main()
+{
+int sum = function_name(3,3);
+printf("%d \n", sum)
+return 0;
+}
+
+3 : 
+int function_name()
+{
+ int i = 1;
+ return i;
+}
+
+int main()
+{
+int return_v = function_name();
+printf("%d \n", return_v);
+return 0;
+}
+
+4 : 
+function_name(char name[10])
+{
+printf("hello %s", name);
+}
+
+int main()
+{
+char name[10] = "abid";
+function_name(name);
+return 0;
+}
+
+
+####**** Ternry Operator : 
+
+Shortcut to if/else whene assigning/returning a value .
+(condition) ? value if true : value if false .
+
+int i = 1;
+int j = i == 1 ? printf("its 1\n") : printf("not 1\n");
+
+
+####**** Function Prorotype :
+
+In C, a function prototype is a declaration that provides 
+information about a function to the compiler before the 
+actual function definition. It tells the compiler about 
+the function's name, return type, and the types of its 
+parameters. Function prototypes serve several important 
+purposes .
+
+
+int add(int a, int b);
+
+int main() {
+    int result = add(3, 5);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b) {
+    return a + b;
+}
+
+
+####**** Loops : 
+
+In C, a loop is a programming construct that allows a set 
+of instructions to be repeated multiple times. Loops are 
+crucial for automating repetitive tasks and for 
+efficiently handling situations where a block of code 
+needs to be executed iteratively. C provides three 
+primary types of loops .
+
+#* For Loop : 
+
+for loop is used when the number of iterations is known 
+beforehand .
+
+int main()
+{
+for (int i = 1; i <= 10; i++)
+{
+printf("%d ", i);
+}
+printf("\n");
+return 0;
+}
+
+
+#* While Loop : 
+
+The while loop is used when the number of iterations is 
+not known beforehand, and the loop continues as long as
+a specified condition is true .
+
+int main()
+{
+int i = 1;
+while (i <= 10)
+{
+printf("%d ", i);
+i++;
+}
+printf("\n");
+return 0;
+}
+
+
+#* Do While Loop : 
+
+The do-while loop is similar to the while loop, but it 
+guarantees that the loop body is executed at least 
+once, as the condition is checked after the loop body .
+
+int main()
+{
+int i = 1;
+do
+{
+printf("%d ", i);
+i++;
+}while(i <= 10);
+printf("\n");
+return 0;
+}
+
+
+####**** Nested Loop : 
+
+nested loop in C language its loop in side loop .
+
+int main()
+{
+int rows;
+int columns;
+char symbol;
+printf("\nenter number of rwos: ");
+scanf("%d", &rows);
+printf("\nenter number of columns: ");
+scanf("%d", &columns);
+scanf("%c");
+printf("\nenter symbol: ");
+scanf("%c", symbol);
+
+for (int i = 1; i <= rows; i++)
+{
+  for (int j = 1; j <= columns; j++)
+  {
+  printf("%c ", symbol);
+  }
+  printf("\n");
+}
+printf("\n");
+return 0;
+}
+
+
+####**** Continue AND Break : 
+
+continue : skips rest of code .
+break : exit a loop or switch .
+
+int main()
+{
+for (int i = 1; i <= 10; i++ )
+{
+   if (i == 5)
+      continue;
+   printf("%d ", i);
+   if (i == 8)
+      break;
+}
+printf("\n");
+return 0;
+}
+
+
+####**** Goto : 
+
+int main(void)
+{
+char name[10];
+name:
+printf("enter your name : ");
+scanf("%s", name);
+if (name == "\0")
+  goto name;
+printf("hello %s", name);
+return (0);  
+}
+
+
+####**** Arrays : 
+
+array[] : An array is a collection of elements of the 
+same data type, stored in contiguous memory locations, 
+Elements are accessed using an index starting from 0 .
+
+data_type array_name[size] = {val1, val2, val3, ... };
+
+int array_name[5] = {1,2,3,4,5};
+int array_name[] = {1,2,3,4,5};
+int array_name[1];
+array_name[0] = 1;
+array_name[1] = 2;
+
+for (int i = 0; i < sizeof(array_name)/4; i++)
+{
+   printf("%d ", array_name[i]);
+}
+
+
+####**** 2D Arrays : 
+
+data_type array_name[array_d][size] = {{,...},{,...},...};
+
+int array_name[2][3]={
+{1,2,3},
+{4,5,6}
+};
+
+for (int i = 0; i < sizeof(array_name)/
+sizeof(array_name[0]); i++)
+{ 
+   for (int j = 0; j < sizeof(array_name[0])/
+   sizeof(array_name[0][0]) ; j++)
+   {
+      printf("%d ", array_name[i][j]);
+   }
+   printf("\n");
+}
+
+
+####**** 3D Arrays : 
+
+data_type array_name[array_d][array_n][size] =  
+{{{,...},{,...}},{{,...},{,...}}}
+
+int array_name[2][2][3] = {
+{
+{1,2,3},
+{4,5,6}
+},
+{
+{7,8,9},
+{10,11,12}
+}}
+
+
+for (int i = 0; i < sizeof(array)/sizeof(array[0]); i++)
+{
+  for (int j = 0; j < sizeof(array[0])/sizeof(array[0]
+  [0]); j++)
+  {
+    for (int k = 0; k < sizeof(array[0][0])/sizeof(array[0]
+    [0][0]); k++)
+    {
+      printf("%d ", array[i][j][k]);
+    }
+    printf("\n");
+  }
+  printf("\n");
+}
+
+#
+1 2 3 
+4 5 6 
+
+7 8 9 
+10 11 12
+#
+
+
+####**** Array of String : 
+
+Strings are Actually is 1 dimensional array of characters
+terminated by a null character '\0' .
+
+char str[size] = {'','',...};
+char str[] = "string";
+
+Strings Functions : 
+
+The <string.h> header file in C provides functions and 
+macros for manipulating strings (sequences of characters).
+
+strlwr() : converts string to lowercase .
+
+strupr() : converts string to uppercase .
+
+strcat(str1, str2) : appends string1 to end string2 .
+
+char *strcat(char *dest, const char *src);
+
+strncat(str1, str2) : appends n characters .
+char *strncat(char *dest, const char *src, size_t n);
+
+strcpy(str1, str2) : copy string2 to string1 .
+char *strcpy(char *dest, const char *src);
+
+strncpy(str1, str2) : copy n characters .
+char *strncpy(char *dest, const char *src, size_t n);
+
+strset(str1, '?') : set all characters to '?' .
+
+strnset(str1, '!') : set n character to '!' .
+
+strrev(str1) : reverses a string .
+
+strlne(str1) : return length of string .
+size_t strlen(const char *str);
+
+strcmp(str1, str2) : compare all characters .
+int strcmp(const char *str1, const char *str2);
+
+strncmp(str1, str2) : compare n characters .
+int strncmp(const char *str1, const char *str2, size_t n);
+
+strcmpi(str1, str2) : compare all ignore case .
+
+strnicmp(str1, str2) : compare n ignore case . 
+
+strstr(str1, str2) : Locates the first occurrence of a 
+substring within another string .
+char *strstr(const char *haystack, const char *needle);
+
+strchr :  Locates the first occurrence of a character in 
+a string . 
+char *strchr(const char *str, int c);
+
+strrcher : Locates the last occurrence of a character in 
+a string .
+char *strrchr(const char *str, int c);
+
+memset : Fills a block of memory with a specified value.
+void *memset(void *ptr, int value, size_t num);
+
+memcpy : Copies a block of memory from one location to 
+another .
+void *memcpy(void *dest, const void *src, size_t num);
+
+
+####**** Struct : 
+
+struct {} : A structure is a user-defined data type that 
+allows you to group variables of different data types 
+under a single name. Each variable within the structure 
+is called a member .
+
+struct struct_name
+{
+char name[10];
+int age;
+};
+
+int main()
+{
+struct struct_name name1;
+struct struct_name name2;
+
+strcpy(name1.name, "abid");
+name1.age = 23;
+strcpy(name2.name, "root");
+name2.age = 25;
+
+printf("your name is %s and your age is %d\n",
+name1.name, name1.age);
+
+return 0;
+}
+
+
+typedef struct
+{
+char name[10];
+int age;
+}Name;
+
+int main()
+{
+Name name1 = {"abid", 23};
+printf("%s \n", name1.name);
+return 0;
+}
+
+In C, the typedef keyword is used to create a new name 
+(alias) for an existing data type. It is often used to 
+improve code readability, create abstraction, or define 
+complex data types more conveniently .
+
+typedef existing_data_type new_type_name;
+
+typedef char Str[10];
+
+int main()
+{
+Str str1 = "abid";
+return 0;
+}
+
+
+####**** Array of Struct : 
+
+struct Name
+{
+char name[10];
+int age;
+};
+
+int main()
+{
+struct Name name1 = {"abid", 23};
+struct Name name2 = {"root", 25};
+
+struct Name arry_name[] = {name1, name2};
+
+for (int i=0; i < sizeof(array_name)/sizeof(array_name[0])
+; i++)
+{
+  printf("your name is %s and your age ois %d\n", 
+  array_name[i].name, array_name[i].age);
+}
+return 0;
+}
+
+
+####**** Union : 
+
+union {} : A union is similar to a struct, but all its 
+members share the same memory location. Only one member 
+can hold a value at a time. Unions are useful when you 
+want to represent different types using the same memory 
+space .
+
+union union_name {
+    data_type member1;
+    data_type member2;
+    // ... more members
+};
+
+
+####**** Enums : 
+
+enum {} : An enumeration is a user-defined data type 
+that consists of named integer constants. It allows 
+you to create symbolic names for values to improve 
+code readability .
+
+enum Day{Sun = 1, Mon = 2, Tue = 3, Wed = 
+4, Thu = 5, Fri = 6, Sat = 7};
+
+int main()
+{
+enum Day today = Sun;
+printf("%d \n", today);
+return 0;
+} 
+
+
+####**** Bitwize Operators : 
+
+bitwise operators are used to perform operations at the 
+bit level. These operators manipulate individual bits of 
+integer operands. The bitwise operators in C include:
+
+& , | , ^ , << , >> , ~ .
+
+#include <stdio.h>
+
+int main() {
+    unsigned int a = 0b11001100;  // Binary 
+    representation of 204
+    unsigned int b = 0b10101010;  // Binary 
+    representation of 170
+
+    // Bitwise AND
+    unsigned int resultAND = a & b;
+    printf("Bitwise AND: %u\n", resultAND);
+
+    // Bitwise OR
+    unsigned int resultOR = a | b;
+    printf("Bitwise OR: %u\n", resultOR);
+
+    // Bitwise XOR
+    unsigned int resultXOR = a ^ b;
+    printf("Bitwise XOR: %u\n", resultXOR);
+
+    // Bitwise NOT
+    unsigned int resultNOT = ~a;
+    printf("Bitwise NOT: %u\n", resultNOT);
+
+    // Left Shift
+    unsigned int resultLeftShift = a << 2;
+    printf("Left Shift: %u\n", resultLeftShift);
+
+    // Right Shift
+    unsigned int resultRightShift = a >> 2;
+    printf("Right Shift: %u\n", resultRightShift);
+
+    return 0;
+}
+
+#
+Bitwise AND: 136
+Bitwise OR: 238
+Bitwise XOR: 102
+Bitwise NOT: 4294967091
+Left Shift: 816
+Right Shift: 51
+#
+
+
+####**** Command Line Argument : 
+
+The main function can take two optional arguments: int 
+argc and char *argv[]. These are used to receive command
+line arguments when the program is executed from the 
+command line .
+
+argc : (argument count): The number of command-line 
+arguments .
+
+argv : (argument vector): An array of strings containing 
+the command-line arguments .
+
+int main(int argc, char *argv[])
+{
+  printf("the number of argument is %d\n", argc - 1);
+  for (int i = 1; i < argc; i++)
+  {
+     printf("argv[i] : %s\n", argv[i]);
+  }
+  printf("\n");
+  return (0);
+}
+
+####**** Files : 
+
+A File is a collection of data stored in the secondary 
+memory , So Files are used for storing information that 
+can be processed by the programs. Files are not only 
+used for storing the data, programs are also stored in 
+files .
+
+"r" : Open a file for reading. The file must exist .
+"w" : Create an empty file for writing. If a file with 
+the same name already exists its content is erased and 
+the file is treated as a new empty file .
+"a" : Append to a file. Writing operations append data at
+the end of the file. The file is created if it does not
+exist .
+
+#* Read File Content : 
+
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    file = fopen("example.txt", "r");
+    if (file == NULL) 
+    {
+        printf("Unable to open the file.\n");
+        return 1;
+    }
+    char buffer[1000];
+    while (fgets(buffer, sizeof(buffer), file) != NULL)
+    {
+        printf("%s", buffer);
+    }
+    fclose(file);
+    return 0;
+}
+
+
+#* Write Content File : 
+
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    file = fopen("output.txt", "w");
+    if (file == NULL) 
+    {
+        printf("Unable to open the file for writing.\n");
+        return 1; // Return an error code
+    }
+    char text[] = "Hello, this is some text to write to 
+    the file.\n";
+    fwrite(text, sizeof(char), sizeof(text) - 1, file);
+    fclose(file);
+    printf("Text has been written to the file.\n");
+    return 0;
+}
+
+
+#* Append Content to File : 
+
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    file = fopen("output.txt", "a");
+
+    if (file == NULL) 
+    {
+        printf("Unable to open the file for appending.
+        \n");
+        return 1;
+    }
+
+    char text[] = "This text is appended to the file.\n";
+    fwrite(text, sizeof(char), sizeof(text) - 1, file);
+    fclose(file);
+    printf("Text has been appended to the file.\n");
+    return 0;
+}
+
+
+#* Check File If Exist : 
+
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    const char *filename = "example.txt";
+
+    file = fopen(filename, "r");
+    if (file != NULL) 
+    {
+        printf("File '%s' exists.\n", filename);
+        fclose(file);
+    } else 
+    {
+        printf("File '%s' does not exist.\n", filename);
+    }
+
+    return 0;
+}
+
+
+#* Remove File : 
+
+#include <stdio.h>
+
+int main() {
+    const char *filename = "example.txt";
+
+    if (remove(filename) == 0) 
+    {
+        printf("File '%s' has been removed.\n", filename);
+    } else 
+    {
+        printf("Unable to remove file '%s'.\n", filename);
+    }
+
+    return 0;
+}
+
+#* Modify File : 
+
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    file = fopen("example.txt", "r+");
+
+    if (file == NULL) 
+    {
+        printf("Unable to open the file.\n");
+        return 1;
+    }
+
+    char buffer[1000];
+    if (fgets(buffer, sizeof(buffer), file) == NULL) 
+    {
+        printf("Error reading from the file.\n");
+        fclose(file);
+        return 1;
+    }
+
+    char newText[] = "This is new text.\n";
+    strcat(buffer, newText);
+
+    // Move the file pointer to the beginning of the 
+    // file for overwriting .
+    rewind(file);
+
+    if (fputs(buffer, file) == EOF) 
+    {
+        printf("Error writing to the file.\n");
+        fclose(file);
+        return 1;
+    }
+
+    fclose(file);
+    printf("File has been modified.\n");
+    return 0;
+}
+
+
+#* Modify words in File : 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    FILE *file;
+    file = fopen("example.txt", "r+");
+
+    if (file == NULL) 
+    {
+        printf("Unable to open the file.\n");
+        return 1;
+    }
+    
+    const char *searchWord = "old";
+    const char *replaceWord = "new";
+
+    char buffer[1000];
+
+    while (fgets(buffer, sizeof(buffer), file) != NULL) 
+    {
+        char *wordLocation = strstr(buffer, searchWord);
+        while (wordLocation != NULL) 
+        {
+            int position = wordLocation - buffer;
+            fseek(file, position, SEEK_SET);
+            fputs(replaceWord, file);
+            fseek(file, 0, SEEK_END);
+            wordLocation = strstr(wordLocation + 
+            strlen(replaceWord), searchWord);
+        }
+    }
+    
+    fclose(file);
+    printf("Word '%s' has been replaced with '%s' in the 
+    file.\n", searchWord, replaceWord);
+
+    return 0;
+}
+
+
+#* Binary File : 
+
+Binary files can store a wide range of information , 
+including : 
+
+Executable Files .
+Images .
+Audio .
+Video .
+DataBases .
+Documents .
+Archives .
+Configuration .
+
+"rb" : Open a file for reading. The file must exist for 
+Binary file .
+"wb" : Create an empty file for writing. If a file with 
+the same name already exists its content is erased and 
+the file is treated as a new empty file , for binary 
+file .
+"ab" : Append to a file. Writing operations append data at
+the end of the file. The file is created if it does not
+exist , for binary file .
+
+Read Binary File Content : 
+ 
+#include <stdio.h>
+
+int main() {r
+    FILE *file;
+    file = fopen("binaryfile.bin", "rb");
+
+    if (file == NULL) 
+    {
+        printf("Unable to open the binary file.\n");
+        return 1;
+    }
+
+    int data;
+    size_t elements_read = fread(&data, sizeof(int), 1, 
+    file);
+
+    if (elements_read == 1) 
+    {
+        printf("Read data from binary file: %d\n", data);
+    } else 
+    {
+        printf("Error reading data from binary file.\n");
+    }
+
+    fclose(file);
+
+    return 0;
+}
+
+
+####**** DMA : 
+
+Dynamic memory allocation refers to the process of ,
+allocating memory for variables at runtime, as opposed 
+to compile time. In programming, dynamic memory allocation 
+is typically achieved using functions like malloc, calloc, 
+realloc, and free in languages such as C and C++ .
+
+The malloc function is used to allocate a specified 
+number of bytes of memory from the heap .
+
+void* malloc(size_t size);
+
+int *arr = (int*)malloc(5 * sizeof(int));
+
+
+The calloc function is used to allocate a specified number 
+of blocks of memory, each with a specified size, from the 
+heap .
+
+void* calloc(size_t num_elements, size_t element_size);
+
+int *arr = (int*)calloc(5, sizeof(int));
+
+
+The realloc function is used to change the size of an 
+already allocated block of memory .
+
+void* realloc(void* ptr, size_t new_size);
+
+arr = (int*)realloc(arr, 10 * sizeof(int));
+
+
+The free function is used to deallocate memory that was 
+previously allocated using malloc, calloc, or realloc .
+
+void free(void* ptr);
+
+free(arr);
+
+
+Dynamic memory allocation is particularly useful when 
+I need to manage memory dynamically during program 
+execution, and I don't know the size of the data in 
+advance. It allows me to allocate memory as needed 
+and release it when it is no longer required. However, 
+it comes with the responsibility of managing the 
+allocated memory and avoiding memory leaks or 
+accessing memory after it has been freed .
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *arr = (int*)calloc(5, sizeof(int));
+
+    if (arr == NULL) 
+    {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+    
+    printf("Original Array:\n");
+    for (int i = 0; i < 5; ++i) 
+    {
+        arr[i] = i + 1;
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    int *newArr = (int*)realloc(arr, 10 * sizeof(int));
+
+    if (newArr == NULL) 
+    {
+        printf("Memory reallocation failed.\n");
+        free(arr);
+        return 1;
+    }
+
+    arr = newArr;
+
+    printf("Extended Array:\n");
+    for (int i = 5; i < 10; ++i) 
+    {
+        arr[i] = i + 1;
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    free(arr);
+
+    return 0;
+}
+
+DMA and Pointer : 
+
+The relationship between pointers and Dynamic Memory 
+Allocation (DMA) is fundamental because pointers are used 
+to manage dynamically allocated memory. Dynamic Memory 
+Allocation involves allocating memory during the runtime 
+of a program, and pointers are essential for accessing 
+and manipulating this dynamically allocated memory .
+
+Dynamic memory is allocated using functions like malloc, 
+calloc, and realloc, which return a pointer to the 
+allocated memory block .
+
+int *ptr = (int*)malloc( sizeof(int) );
+ptr is a pointer that points to the dynamically 
+allocated memory .
+
+
+
+
+
+
+####**** MakeFile : 
+
+A Makefile is a special file used in software development 
+projects to manage the build process of a program or 
+software. It contains a set of rules and dependencies 
+that describe how the project's source code should be 
+compiled and linked to produce the executable or other 
+desired output. Makefiles are primarily associated with 
+the GNU build system and the make utility .
+
+the components of makefile include : 
+
+1 : targets .
+2 : dependencies .
+3 : rules .
+4 : commands .
+
+CC = gcc
+CFLAGS = -Wall -Werror
+
+all: my_program
+
+my_program: main.c
+    $(CC) $(CFLAGS) main.c -o my_program 
+
+clean:
+    rm -f my_program
+
+//  we can use make command to run the makefile code .
+// and make clean to execute the rm command .
+
+
+####**** Header File : 
+
+Header files are additional files in a C language 
+containing definitions of different functions and 
+their associated variables that need to be imported 
+into a C program with the help of a preprocessor 
+#include statement. All the header files have a '.h' 
+extension that contains C function declarations and 
+macro definitions. The default header file that comes
+with the C compiler is the stdio.h .
+
+#include <file>
+#include "file"
+
+The preprocessor is a phase in the compilation process 
+of a program that occurs before the actual compilation. 
+It is a tool that processes the source code before it is 
+passed to the compiler. In languages like C and C++, the 
+preprocessor performs various tasks, such as macro 
+substitution, file inclusion, conditional compilation, 
+and more .
+
+Macro Substitution :
+
+The preprocessor can define and replace macros in the c
+code. Macros are symbolic names or expressions that are 
+replaced by a specified block of code before compilation
+
+#define PI 3.14159
+float area = PI * radius * radius;
+
+
+File Inclusion :
+
+The preprocessor can include the contents of other files 
+in the code. This is commonly used to organize code into 
+multiple files or to include header files .
+
+#include <stdio.h>
+
+
+Conditional Compilation :
+
+The preprocessor can include or exclude portions of code 
+based on certain conditions. This is often used with 
+preprocessor directives like #ifdef, #ifndef, #else, 
+and #endif .
+
+#ifdef DEBUG
+printf("Debug mode is enabled.\n");
+#endif
+
+
+Symbolic Constants :
+
+The preprocessor allows the definition of symbolic 
+constants that can be used throughout the code. This 
+is similar to macro substitution but is often used for 
+values that do not involve code . 
+
+#define MAX_SIZE 100
+
+
+Line Control :
+
+The preprocessor provides directives like #line to 
+control the line numbering in error messages and 
+debugging information .
+
+#line 50 "myfile.c"
+
+
+Header File Syntax : 
+
+"header_file.h" .
+
+#ifndef HEADER_FILE_NAME
+#define HEADER_FILE_NAME
+    the entire header file
+#endif
+
+#if FIRST_SYSTEM
+    #include "sys.h"
+#elif SEC_SYSTEM
+    #include "sys2.h"
+#elif THRID_SYSTEM
+    ....
+#endif
+
+
+####**** C Network : 
+
+##** Listing Network Adapters on Linux : 
+
+we can use C language to build program to get information 
+about the network adapter line linux os , we can use 
+sys/socket.h and netdb.h and ifaddrs.h and stdlib.h
+and stdio.h and If we work in window we can use : 
+winsock2.h and iphlpapi.h and ws2tcpip.h .
+
+and we use function like getifaddrs() for get IPV4 
+AF_INET and IPV6 with AF_INET6 .
+
+##** Sockets : 
+
+socket is one endpoint of a communication link between
+systems, linux and mac os use Socket APIS version name 
+"Brekeley Sockets" and windows use "Winsock" .
+
+socket can used for communication in client-server systems
+and we can define socket conection with IP and Port Number
+Client + request {socket} >>*<< {socket} response + server .
+
+#* Socket Functions : 
+
+socket() creates and initializes a new socket .
+
+bind() associates a socket with a particular local IP 
+address and port number .
+
+listen() is used on the server to cause a TCP socket 
+to listen for new connections .
+
+connect() is used on the client to set the remote address 
+and port. In the case of TCP, it also establishes a 
+connection .
+
+accept() is used on the server to create a new socket 
+for an incoming TCP connection .
+
+send() and recv() are used to send and receive data 
+with a socket .
+
+sendto() and recvfrom() are used to send and receive 
+data from sockets without a bound remote address .
+
+close() (Berkeley sockets) and closesocket() (Winsock 
+sockets) are used to close a socket. In the case of TCP, 
+this also terminates the connection . 
+
+shutdown() is used to close one side of a TCP connection 
+It is useful to ensure an orderly connection teardown .
+
+select() is used to wait for an event on one or more 
+sockets .
+
+getnameinfo() and getaddrinfo() provide a protocol 
+independent manner of working with hostnames and 
+addresses .
+
+setsockopt() is used to change some socket options .
+
+fcntl() (Berkeley sockets) and ioctlsocket() (Winsock 
+sockets) are also used to get and set some socket options
+
+# with socket we can create server or client for recieve or
+# retrieve data from client to server .
+# like website we can retrieve all data like html text and 
+# header response and request and we can creat chat app and 
+# more like web server .
+
+socket() : creates an endpoint for communication and returns 
+a file descriptor that refers to that endpoint. The file  
+descriptor returned by a successful call will be the 
+lowestnumbered file descriptor not currently open for 
+the process .
+
+domain : argument that selects the protocol family which
+will be used for communication, these families defined by
+"sys/socket.h" .
+
+AF_UNIX : local comunication .
+AF_INET : IPv4 Internet protocols .
+AF_AX25 : Amateur radio AX.25 protocol .
+AF_IPX  : IPX - Novell protocols .
+AF_APPLETALK : AppleTalk .
+AF_INET6 : IPv6 Internet protocols .
+AF_NETLINK : Kernel user interface device .
+AF_PACKET : Low-level packet interface .
+AF_LLC : Logical link control (IEEE 802.2 LLC) protocol .
+AF_CAN : Controller Area Network automotive bus protocol .
+AF_BLUETOOTH : Bluetooth low-level socket protocol .
+AF_ALG : Interface to kernel crypto API .
+
+Socket Type : Sockets of type SOCK_STREAM are full-duplex  
+byte streams, They do not preserve record boundaries, A 
+stream socket must be in a connected state before any data 
+may be sent or received on it .
+
+SO_KEEPALIVE : is enabled on the socket the protocol checks  
+in a protocol-specific manner if the other end is still alive
+
+SOCK_DGRAM and SOCK_RAW : sockets allow sending of datagrams 
+to correspondents named in sendto(2) calls .
+
+protocol : the protocol specifies a particular protocol to 
+be used with the socket, Normally only a single protocol 
+exists to sup-port a particular socket type within a given
+protocol family, in which case protocol can be specified 
+as 0 .
+
+Connect : connect function used for connect to another 
+socket and we can use functions like : read(), write(),
+send(), recv() .
+
+accept : function accept a connection on a socket
+
+listen : function for make server listen to client .
+
+bind : function for bind a name to a socket .
+
+
+#* Socket and HTTP : 
+
+with socket we can use protocols like FTP , TCP , UDP and 
+HTTP to connect with server for send and receive data 
+and we can use HTTP protocol with prot 80 for recieve 
+data from web .
+
+#* Chat Communication : 
+
+# Server Side : 
+server -> socket -> bind -> listen 
+-> accept -> read 
+-> write -> close .
+
+# Client Side : 
+client -> socket -> connection 
+-> write -> read -> close .
+
+
+
+
+
+
